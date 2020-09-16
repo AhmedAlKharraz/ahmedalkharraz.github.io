@@ -328,6 +328,16 @@ a {
   padding: 20px;
 }
 
+
+
+
+.emailbutton {
+  color: white;
+  text-decoration: none;
+  padding: 50px 100px;
+
+}
+
 @media(min-width:768px) {
   .name-pic .name {
     padding: 0;
