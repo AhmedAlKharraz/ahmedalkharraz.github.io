@@ -1,0 +1,458 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /*border: red solid 1px;*/
+  font-size: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+  color: #a0a1a8;
+
+}
+
+.sans-font {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  color: #b2b3b9;
+  line-height: 2.5rem;
+
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #f0f0f0;
+  line-height: 3rem;
+}
+
+.about-me,
+.my-portfolio,
+.contact-me {
+  margin-top: -1px;
+}
+
+header,
+.about-me,
+.name-pic,
+.intro,
+.my-portfolio h1,
+.cards,
+.contact-me,
+.send-email,
+.social-media {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bg1 {
+  background: #333646;
+
+}
+
+header {
+  background: #333646;
+  padding: 20px 20px 5px 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fixed-nav header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/*
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sticky+.container {
+  padding-top: 102px;
+}
+*/
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============= Navbar ============= */
+
+.navbar,
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar img {
+  width: 40px;
+  margin: 10px auto;
+}
+
+.nav-tab {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-tab li {
+  padding-bottom: 20px;
+}
+
+.nav-tab li a {
+  font-size: 1.8rem;
+  color: #686a76;
+  position: relative;
+}
+
+.clicked {
+  color: white !important;
+}
+
+.clicked:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffaf29;
+  border-radius: 50%;
+  bottom: -15px;
+  align-self: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.nav-tab li {
+  text-align: center;
+}
+
+/* ============= About me ============= */
+
+.about-me {
+  background: #333646;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-pic .pic img {
+  width: 350px;
+}
+
+.name p {
+  font-size: 4rem;
+  font-family: "Spartan", sans-serif;
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  margin-top: 5px;
+  background: #ffaf29;
+}
+
+.intro {
+  width: 350px;
+}
+
+.my-portfolio {
+  background: #252734;
+}
+
+/* ============= Cards ============= */
+
+/*
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+*/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+
+}
+
+.card {
+  background: #424657;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* to fix */
+  margin: 10px 10px;
+}
+
+.card .card-disc {
+  padding: 10px 10px 0 10px;
+}
+
+.card .card-background {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.card .card-background img {
+  display: block;
+  width: 100%;
+}
+
+.card .card-link {
+  position: relative;
+}
+
+.card .card-link div {
+  position: absolute;
+  background: rgba(255, 175, 41, 0.5);
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card .card-link div a {
+  background: #ffaf29;
+  padding: 1px 45px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ============= Contact me ============= */
+
+.contact-me {
+  background: #333646;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.contact-me .send-email,
+.contact-me .social-media {
+  margin: auto;
+}
+
+.send-email,
+.social-media p,
+.icons {
+  text-align: center;
+}
+
+.send-email button {
+  width: 250px;
+  height: 50px;
+  background: #ffaf29;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  align-self: center;
+  border: 0;
+}
+
+.send-email button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+
+.icons a {
+  display: inline-block;
+  margin: 10px 10px;
+  align-items: center;
+}
+
+.icons a img {
+  width: 30px;
+}
+
+
+/* ======----- paddings ------====== */
+
+.about-me img {
+  padding-bottom: 20px;
+}
+
+.name-pic .name {
+  padding: 20px;
+}
+
+.intro {
+  padding: 10px 20px;
+}
+
+
+.intro p:nth-child(1) {
+  padding-bottom: 20px;
+}
+
+.intro p:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+
+.my-portfolio,
+.contact-me {
+  padding: 20px;
+}
+
+@media(min-width:768px) {
+  .name-pic .name {
+    padding: 0;
+  }
+
+  /*
+  .sticky+.container {
+    padding-top: 500px;
+  }
+*/
+
+  .stick-bg {
+    background: #333646;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0;
+  }
+
+  .navbar,
+  .about-me {
+    flex-direction: row;
+  }
+
+  .navbar img {
+    width: 40px;
+    margin: 0;
+  }
+
+  .navbar nav,
+  .intro {
+    margin-left: auto;
+  }
+
+  .nav-tab li {
+    margin-left: 20px;
+  }
+
+
+
+  .about-me,
+  .my-portfolio,
+  .contact-me {
+    padding: 20px;
+  }
+
+  .intro {
+    margin-top: auto;
+  }
+
+  .intro p:nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  .intro p:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+  .card {
+    margin: 15px;
+    overflow: hidden;
+  }
+
+  .card-link {
+    height: 0px;
+    transition: all 1s ease;
+    bottom: -50px;
+    left: 0;
+  }
+
+  /* I added this because I tried to do it from js in app.js */
+  .card:hover .card-link {
+    overflow: visible;
+    transform: translateY(-50px);
+    transition: 0.5s;
+  }
+
+  .my-portfolio h1 {
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+  .contact-me {
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+  }
+
+
+  .contact-me h1 {
+    position: absolute;
+    padding-bottom: 20px;
+    left: 0;
+    margin-right: auto;
+  }
+
+  .contact-me .social-media,
+  .contact-me .send-email {
+    padding-top: 40px;
+    margin-bottom: 40px;
+    max-width: 1000px;
+  }
+
+  .contact-me .social-media {
+    margin: 0 auto;
+  }
+
+  .social-media .icons {
+    padding-top: 10px;
+  }
+
+  .social-media .icons a {
+    transition: all 0.8s ease;
+  }
+
+  .social-media .icons a:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+  }
+
+}
