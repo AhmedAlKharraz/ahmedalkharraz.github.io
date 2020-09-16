@@ -1,0 +1,249 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli Roboto', sans-serif;
+    color: #565656;
+    background-color: #FAFAFA;
+    line-height: 1.8em;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #565656;
+}
+
+a:hover {
+    color: black;
+}
+
+p {
+    font-size: 1.25em;
+    margin-bottom: 1.8em;
+}
+
+.about-me p {
+    margin-top: 0;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h1 {
+    margin-top: 0.5em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---------- */
+.name a,
+.main-nav a {
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+.main-nav a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    margin-bottom: .3em;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* ---- Main ---------- */
+
+.about-me {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.portfolio-section {
+
+    margin: 0 auto;
+    padding: 1em 2em;
+    background-color: white;
+    text-align: center;
+
+}
+
+.portfolio-section .name {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+}
+
+.card {
+    display: block;
+    max-width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* ---- Contact ---------- */
+
+.contact-section {
+    text-align: center;
+    color: #7F7F7F;
+    max-width: 600px;
+    margin: 4em auto;
+
+}
+
+.phone,
+.phone-no {
+    display: inline-block;
+    margin: .5em 0;
+}
+
+.email,
+.email-address {
+    display: inline-block;
+    margin: .5em 0;
+}
+
+
+/* ---- Footer ---------- */
+
+.footer {
+    border-top: darkgray solid 1.5px;
+    position: relative;
+}
+
+.footer .footer-name {
+    float: left;
+}
+
+.footer .footer-backtop {
+    float: right;
+}
+
+.footer .nav-bottom {
+    display: none;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+    .main-nav a {
+        display: inline-block;
+        background-color: inherit;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .about-me {
+        display: inline-block;
+    }
+
+    .profile-img {
+        float: right;
+        margin-left: 30px;
+        margin-bottom: 80px;
+    }
+
+    .about-me p {
+        text-align: left;
+    }
+
+    .main-nav {
+        text-align: center;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+    }
+
+    .portfolio-section {
+        padding: 2em 0;
+    }
+
+    .card {
+        float: left;
+        width: calc(50% - 20px);
+        height: 450px;
+    }
+
+    .footer .footer-backtop {
+        display: none;
+    }
+
+    .footer .nav-bottom {
+        display: block;
+        list-style-type: none;
+        list-style-position: outside;
+        float: right;
+        padding: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .footer .nav-bottom li {
+        float: left;
+        margin-left: 30px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .container .name,
+    .main-nav {
+        display: inline-block;
+    }
+
+    .container .name {
+        float: left;
+    }
+
+    .main-nav {
+        float: right;
+        margin-top: .6em;
+    }
+
+    .main-nav a {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .portfolio-section {
+        margin: auto 1em;
+    }
+
+    .card {
+        width: calc(33.333% - 40px);
+        margin: 0 20px;
+
+    }
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

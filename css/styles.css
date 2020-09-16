@@ -352,6 +352,11 @@ a {
     flex-direction: row;
   }
 
+  .navbar {
+    height: 55px;
+  }
+
+
   .navbar img {
     width: 40px;
     margin: 0;
