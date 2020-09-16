@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4em;
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    color: #6e859c;
+    padding: 0;
+    margin: 0;
+}
+
+.search-box {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 500px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1rem;
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+/* to remove the extra space occured by anchor tag */
+.picture a {
+    display: grid;
+}

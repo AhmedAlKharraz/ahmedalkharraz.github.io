@@ -1,0 +1,204 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    padding: 0 10px;
+}
+
+fieldset,
+input,
+select,
+button,
+textarea {
+    border: none;
+}
+
+h1 {
+    padding: 20px 0;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #2d3945 !important;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- All Border Line Style ---------- */
+.separate-line {
+    padding: 1px 0.75em;
+    border-top: 5px solid #2d3945;
+    border-bottom: 2px solid #2d3945;
+}
+
+.separate-fieldset {
+    margin: 40px 0;
+
+    border-bottom: 2px solid #2d3945;
+}
+
+
+
+/* ---- Header ---------- */
+.main-header {
+    width: 100%;
+    background: #2d3945;
+    color: white;
+    text-align: center;
+}
+
+.sub-header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.sub-header h2 {
+    margin-bottom: 15px;
+}
+
+.sub-header h3 {
+    color: #9da3a8;
+}
+
+
+/* ---- Form ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    padding: 0;
+
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#full-name[type="text"]::placeholder,
+#email-address[type="email"]::placeholder {
+    text-align: right;
+    font-style: italic;
+    padding: 3px;
+    color: #a4a9ae;
+}
+
+input,
+textarea,
+select {
+    padding: 10px 15px;
+    background-color: #eff0f1;
+    border-radius: 3px;
+}
+
+.field #zip-code {
+    width: 50%;
+}
+
+.newsletter .field:not(:last-child) {
+    display: inline-block;
+    width: 100%;
+}
+
+.field .in-field-group {
+    margin: 15px 0;
+}
+
+textarea {
+    height: 100px;
+}
+
+.signup {
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 3px;
+    background: #4ebbb5;
+    color: white;
+}
+
+.copyright {
+    color: #a4a9ae;
+    margin: 20px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.signup {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+    main {
+        width: 740px;
+        margin: 0 auto;
+    }
+
+    input,
+    select {
+        padding: 15px 15px;
+    }
+
+    /* the only solution I found */
+    label {
+        margin-top: 10px;
+    }
+
+    label[for="other-topic-texarea"] {
+        margin: 0;
+    }
+
+    .contact-info .field {
+        flex-direction: row;
+    }
+
+    .contact-info input,
+    .contact-info select {
+        width: 100%;
+    }
+
+    .contact-info label {
+        display: inline-block;
+        min-width: 140px;
+    }
+
+    .contact-info #zip-code {
+        width: 20%;
+    }
+
+    .field .in-field-group {
+        margin: 20px 0;
+    }
+
+    .field textarea {
+        margin-top: 20px;
+    }
+}
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

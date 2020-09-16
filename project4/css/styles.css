@@ -1,0 +1,927 @@
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  font-size: 10px;
+  overflow-x: hidden;
+  /* border: 1px black solid; */
+}
+
+/* ---- All Border Line Style ---------- */
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 60px 1fr;
+  grid-template-areas:
+    "head"
+    "pageNav"
+    "mainContent";
+}
+
+.dashboard-section,
+.daily-trafic-section,
+.mobile-users-section,
+.social-states-section,
+.new-members-section,
+.recent-activity-section,
+.message-user-section,
+.settings-section {
+  padding: 20px 10px;
+  border-bottom: #d8d8d8 1px solid;
+}
+
+h3 {
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+
+/* ================================= 
+  Main Layout Styles
+==================================== */
+
+/* ============== Header ============== */
+/* ---- Header ---------- */
+header {
+  grid-area: head;
+  background-color: #7477bf;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ---- Header -> Profile ---------- */
+header .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.profile .vl {
+  border-right: 1px #5d61bf solid;
+}
+
+.profile .notif-icon {
+  width: 25px;
+  height: 25px;
+  margin: auto 0;
+  /* for space between the vertical line and this element */
+  margin-right: 10px;
+}
+
+.profile .notif-icon:hover {
+  transform: rotateY(360deg);
+  transition: .5s;
+}
+
+.profile .alert-notif {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: relative;
+  left: 28px;
+  top: 6px;
+  background: #85db81;
+}
+
+.profile .profile-img {
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  border-radius: 50%;
+  /* for space between the vertical line and this element */
+  margin-left: 10px;
+}
+
+.profile h3 {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+/* ============== Sidebar ============== */
+
+.sidebar-nav {
+  grid-area: pageNav;
+  background-color: #4d4c72;
+}
+
+.ul-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.ul-nav li {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul-nav li.selected::after {
+  content: "";
+  /* this is important */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  /* end important */
+  border-radius: 10px 10px 0 0;
+  background-color: #85db80;
+}
+
+/* ============== Dashboard tab & Search ============== */
+
+.search-section {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+/* ---- Dashboard tab ---------- */
+.search-section h5 {
+  padding: 0 10px;
+  font-size: 1.3rem;
+  color: #767575;
+}
+
+/* ---- Search ---------- */
+.search-box {
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  background: #fbfbfb;
+  border-left: 1px #dfdfdf solid;
+  border-bottom: 1px #dfdfdf solid;
+}
+
+.search-box input {
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  border: 1px solid #dfdfdf;
+  background-image: url(../icons/search.png);
+  background-size: 15px;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+
+/* ============== First Dashboard with Chart ============== */
+
+.dashboard-section {
+  grid-area: mainContent;
+  padding: 10px 20px;
+
+}
+
+/* ---- Alert Div ---------- */
+.alert {
+  background-color: #7377bf;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+/* ---- Alert Div -> Texts ---------- */
+.alert-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.alert-text h5 {
+  font-size: 1.4rem;
+}
+
+.alert-text h5:first-child {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.alert-text p {
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+/* ---- Alert Div -> Cross sign ---------- */
+.alert .alert-sign img {
+  width: 10px;
+  height: 10px;
+}
+
+/* ---- CHART Section ---------- */
+.chart-section {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+.traffic-title h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+
+.report-tabs {
+  padding: 10px 0;
+}
+
+.report-tabs a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 3px;
+  color: #8f8f8f;
+  font-size: 1.4rem;
+}
+
+.report-tabs .selected {
+  background-color: #81c98f;
+  color: white;
+  border-radius: 50px;
+}
+
+.chart {
+  padding-top: 30px;
+  width: 100vw;
+  height: 300px;
+
+}
+
+/*
+.dashboard-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin: 15px -10px;
+}
+*/
+/* ---- DAILY TRAFFIC CHART Section ---------- */
+.daily-trafic-section {
+  /*padding: 20px 10px;*/
+  display: flex;
+  flex-direction: column;
+  /*border-bottom: #d8d8d8 1px solid;*/
+
+}
+
+/*
+.daily-trafic-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+
+.daily-chart {
+  padding-top: 10px;
+  position: relative;
+  width: 95vw;
+}
+
+/*
+.daily-trafic-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin: 15px -10px;
+}
+*/
+
+/* ---- MOBILE USERS CHART Section ---------- */
+.mobile-users-section {
+  /*padding: 20px 10px;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /*border-bottom: #d8d8d8 1px solid;*/
+
+}
+
+/*
+.mobile-users-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+
+.mobile-chart {
+  padding-top: 10px;
+  position: relative;
+  width: 95vw;
+}
+
+/*
+.mobile-users-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin: 15px -10px;
+}
+*/
+/* ============== Social Stats Section ============== */
+
+.social-states-section {
+  /*border-bottom: #d8d8d8 1px solid;*/
+}
+
+/*
+.social-states-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+
+.social-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fbfbfb;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* ---- social -> Texts ---------- */
+.social-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.social .social-name h6 {
+  font-size: 1.4rem;
+  color: #7477bf;
+}
+
+.social .social-numbers h5 {
+  font-size: 2.5rem;
+  color: #666666;
+}
+
+/* ---- social -> Icon ---------- */
+.social .roundshape {
+  background: #7377bf;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundshape img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  fill: white;
+}
+
+/*
+.social-states-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin-top: 15px;
+}
+*/
+/* ============== New Members Section ============== */
+
+.new-members-section {
+  /*margin-top: 30px;*/
+  /*border-bottom: #d8d8d8 1px solid;*/
+
+}
+
+/*
+.new-members-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+.new-members-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  margin-left: 0 15px;
+  color: #696969;
+
+
+}
+
+.member-details:not(:last-child) {
+  border-bottom: 1px #e9e9e9 solid;
+
+}
+
+/*
+.member-details:not(:last-child)::after {
+  content: "";
+  width: calc(100% - 30px);
+  height: 1px;
+  position: absolute;
+  margin-top: 50px;
+  background-color: #e9e9e9;
+}
+*/
+
+.member-details p:nth-child(2) {
+  color: #7679c0;
+}
+
+.member-details p:nth-child(3) {
+  margin-left: auto;
+}
+
+.member-details img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/*
+.new-members-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin-top: 15px;
+}
+*/
+/* ============== Recent Activity Section ============== */
+
+.recent-activity-section {
+  /*margin-top: 30px;*/
+  /*border-bottom: #d8d8d8 1px solid;*/
+
+}
+
+/*
+.recent-activity-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+.recent-activity-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 15px;
+  color: #696969;
+
+}
+
+/* for the arrow */
+.activity-details img:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.activity-details:not(:last-child) {
+  border-bottom: 1px #e9e9e9 solid;
+
+}
+
+/*
+.activity-details:not(:last-child)::after {
+  content: "";
+  width: calc(100% - 30px);
+  height: 1px;
+  position: absolute;
+  margin-top: 50px;
+  background-color: #e9e9e9;
+}
+*/
+.member-activity {
+  flex: 1;
+}
+
+/*
+.recent-activity-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin-top: 15px;
+}
+*/
+/* ============== Message User Section ============== */
+
+.message-user-section {
+  /*margin-top: 30px;*/
+  /*border-bottom: #d8d8d8 1px solid;*/
+
+}
+
+/*
+.message-user-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+.message-user-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.message-user-group input,
+.message-user-group textarea {
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d1d1;
+  background-color: #fbfbfb;
+}
+
+.message-user-group textarea {
+  height: 100px;
+}
+
+.message-user-group button {
+  background-color: #7377bf;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  border: 1px;
+}
+
+/*
+.message-user-section::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  margin-top: 15px;
+}
+*/
+/* ============== Settings Section ============== */
+
+.settings-section {
+  /* margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px; */
+}
+
+/*
+.settings-section h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+*/
+.settings-group {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.settings-group .items,
+.settings-group .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.items {
+  padding-bottom: 20px;
+}
+
+.items p {
+  font-size: 1.2rem;
+  width: 170px;
+}
+
+.dropdown select {
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d1d1;
+  background-color: #fbfbfb;
+  color: #4d4c72;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons button {
+  flex-grow: 1;
+  background-color: #7377bf;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  border: 1px;
+  margin: 5px;
+}
+
+/* ---- Toggle Button ---------- */
+.onoffswitch {
+  position: relative;
+  width: 80px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #dddcce;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 27px;
+  padding: 0;
+  line-height: 27px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #7477BF;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #E8E8E8;
+  color: #FFFFFF;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 22px;
+  margin: 4.5px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 49px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+      "head head"
+      "pageNav mainContent";
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  header .profile {
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  .ul-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .ul-nav li {
+    width: 90px;
+    height: 60px;
+    margin-top: 20px;
+  }
+
+  .ul-nav li.selected::after {
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    /* end important */
+    border-radius: 0 10px 10px 0;
+  }
+
+  .search-box input {
+    width: 350px;
+  }
+
+  .title-and-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .report-tabs {
+    margin-left: auto;
+  }
+
+
+
+
+  /* ============== Charts ============== */
+  .daily-chart {
+    width: 85vw;
+    height: 60vh;
+  }
+
+  .mobile-chart {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  #trafficChart {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+
+  .main-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 450px 350px 200px 280px 350px;
+    grid-template-areas:
+      "search search"
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "new-members activity"
+      "message-user setting";
+  }
+
+  .search-section {
+    grid-area: search;
+
+  }
+
+  .dashboard-section {
+    grid-area: traffic;
+  }
+
+  .daily-trafic-section {
+    grid-area: daily;
+    border-right: #d8d8d8 1px solid;
+
+  }
+
+  .mobile-users-section {
+    grid-area: mobile;
+  }
+
+  .social-states-section {
+    grid-area: social;
+  }
+
+  .new-members-section {
+    grid-area: new-members;
+    border-right: #d8d8d8 1px solid;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-activity-section {
+    grid-area: activity;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message-user-section {
+    grid-area: message-user;
+    border-right: #d8d8d8 1px solid;
+
+  }
+
+  .settings-section {
+    grid-area: setting;
+  }
+
+  .dropdown input {
+    margin: 17px 0;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  /* ============== Charts ============== */
+  .daily-chart {
+    width: 40vw;
+    height: 60vh;
+  }
+
+  .mobile-chart {
+    width: 40vw;
+    height: 40vh;
+  }
+
+  #trafficChart {
+    width: 90%;
+  }
+
+}

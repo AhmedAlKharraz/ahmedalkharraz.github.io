@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>THE CODE REVIEW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="main-header">
+            <h1>THE CODE REVIEW</h1>
+        </div>
+    </header>
+    <main>
+        <div class="sub-header">
+            <h2>Sign up for our newslater</h2>
+            <h3>get the latest news on how your code is doing right in your inbox</h3>
+        </div>
+        <div class="separate-line"></div>
+        <div>
+            <form action="#">
+
+                <fieldset class="contact-info">
+                    <legend>
+                        <h1>Contact information</h1>
+                    </legend>
+
+                    <!-- Field #1 -->
+                    <div class="field">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="required">
+                    </div>
+                    <!-- Field #2 -->
+                    <div class="field">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" id="email-address" name="email-address" placeholder="required">
+                    </div>
+                    <!-- Field #3 -->
+                    <div class="field">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone-number">
+                    </div>
+                    <!-- Field #3 -->
+                    <div class="field">
+                        <label for="street-address">Street Address</label>
+                        <input type="text" id="street-address" name="street-address">
+                    </div>
+                    <!-- Field #5 -->
+                    <div class="field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <!-- Field #6 -->
+                    <div class="field">
+                        <label for="state">State</label>
+                        <select name="state" id="state">
+                            <option value="" hidden>Choose State</option>
+                            <option value="NY">NY</option>
+                            <option value="TX">TX</option>
+                            <option value="LA">LA</option>
+                            <option value="LV">LV</option>
+                        </select>
+                    </div>
+                    <!-- Field #7 -->
+                    <div class="field">
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" name="zip-code">
+                    </div>
+                </fieldset>
+
+                <div class="separate-fieldset"></div>
+
+                <fieldset class="newsletter">
+                    <legend>
+                        <h1>Newsletter</h1>
+                    </legend>
+
+                    <!-- Field #1 -->
+                    <div class="field">
+                        <label>Select the newsletters you would like to recive</label><br>
+
+                        <div class="in-field-group">
+                            <input type="checkbox" name="html-news" id="html-news" value="html-news">
+                            <label for="html-news">HTML News</label><br>
+                        </div>
+                        <div class="in-field-group">
+                            <input type="checkbox" name="css-news" id="css-news" value="css-news">
+                            <label for="css-news">CSS News</label><br>
+                        </div>
+                        <div class="in-field-group">
+                            <input type="checkbox" name="javscript-news" id="javscript-news" value="javscript-news">
+                            <label for="javscript-news">Javscript News</label><br>
+                        </div>
+                    </div>
+                    <!-- Field #2 -->
+                    <div class="field">
+
+                        <label>Newsletter format</label><br>
+                        <div class="in-field-group">
+                            <input type="radio" name="newsletter-format" id="html" value="html">
+                            <label for="html">HTML news</label><br>
+                        </div>
+                        <div class="in-field-group">
+                            <input type="radio" name="newsletter-format" id="plain-text" value="plain-text">
+                            <label for="plain-text">Plain text</label><br>
+                        </div>
+                    </div>
+                    <!-- Field #3 -->
+                    <div class="field">
+                        <label for="other-topic-texarea">Other topics you'd like to hear about</label>
+                        <textarea id="other-topic-texarea" name="other-topic-texarea" cols="30" rows="10"></textarea>
+                    </div>
+
+                </fieldset>
+                <input type="submit" class="signup" value="Sign Up">
+            </form>
+            <p class="copyright">Copyright the code review</p>
+        </div>
+    </main>
+</body>
+
+</html>
