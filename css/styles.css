@@ -160,8 +160,8 @@ a {
   align-items: center;
 }
 
-.name-pic .pic img {
-  width: 350px;
+.name-pic .pic img, .intro {
+  width: 320px;
 }
 
 .name p {
@@ -178,9 +178,6 @@ a {
   background: #ffaf29;
 }
 
-.intro {
-  width: 350px;
-}
 
 .my-portfolio {
   background: #252734;
